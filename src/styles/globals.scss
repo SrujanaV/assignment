@@ -27,8 +27,18 @@ a {
   .input_wrap {
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+    }
     .search_input {
       margin: 0px 20px 20px;
+      @media all and (min-width: 768px) and (max-width: 1024px) {
+        margin: 0 5px 20px;
+      }
+      @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
       select,
       input {
         min-width: 200px;
