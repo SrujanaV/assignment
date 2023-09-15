@@ -19,7 +19,6 @@ export const searchPhotos = async ({ searchTerm, category }) => {
       tags: category,
     },
   });
-  console.log(response);
 
   return response.data.photos.photo.map((photo) => ({
     id: photo.id,

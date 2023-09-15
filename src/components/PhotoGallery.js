@@ -1,8 +1,13 @@
+// MODULES //
 import React from "react";
-import Image from "next/image";
+
+// COMPONENTS //
 import Link from "next/link";
+
+// STYLES //
 import styles from "@/styles/gallery.module.scss";
 
+/** Component to display photos */
 const PhotoGallery = ({ photos }) => {
   return (
     <div className={styles.gallery_wrap}>

@@ -1,8 +1,10 @@
+// MODULES //
 import React, { useState } from "react";
 
+/** Component for search functionality */
 const SearchForm = ({ onSubmit }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [category, setCategory] = useState("Mountain");
+  const [category, setCategory] = useState("-");
 
   const handleSearch = () => {
     onSubmit({ searchTerm, category });
@@ -28,6 +30,7 @@ const SearchForm = ({ onSubmit }) => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
+            <option value="-">All</option>
             <option value="Mountain">Mountain</option>
             <option value="Beaches">Beaches</option>
             <option value="Birds">Birds</option>
@@ -36,7 +39,7 @@ const SearchForm = ({ onSubmit }) => {
         </div>
       </div>
       <div>
-        <button onClick={handleSearch} className="search_btn">
+        <button onClick={handleSearch} id="search_btn" className="search_btn">
           Search
         </button>
       </div>
